@@ -3,4 +3,6 @@
 
 Contributors:
 Egzona Rexhepi, 
-Yashas Lokesh
+Yashas Lokesh,
+Christopher Xu,
+Devanshaw Singh
