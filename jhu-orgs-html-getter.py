@@ -42,7 +42,7 @@ driver.execute_script(script)
 time.sleep(30)
 html = driver.page_source
 
-soup = BeautifulSoup(html)
+soup = BeautifulSoup(html, features='html.parser')
 
 with open("page.html", 'w') as f:
     f.write(soup.prettify())
