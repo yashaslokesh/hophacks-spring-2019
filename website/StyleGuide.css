@@ -1,0 +1,82 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=OpenSans');
+
+html, body{height:100%; margin:0;padding:0}
+ 
+.container-fluid{
+  height:100%;
+  display:table;
+  width: 100%;
+  padding: 0;
+}
+ 
+.row-fluid {height: 100%; display:table-cell; vertical-align: middle;}
+
+.centering {
+  float:none;
+  margin:0 auto;
+}
+
+h1 {
+font-family: "OpenSans";
+padding: 5em;
+margin: 5em;
+text-align: text-center;
+text-transform: lowercase;
+font-size: 10em;
+}
+
+p {
+  font-family: 'OpenSans';
+  line-height: 1.7em;
+  font-size: 1.2em;
+}
+
+button {
+ background-image: url(jhu.jpeg);
+ padding: 100px 110px;
+ border-radius: 10px;
+ color: back;
+ transition: all .2s;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 30px;
+}
+
+.color span {
+  font-family: "OpenSans";
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.red {
+  background-color: #a2230a;
+}
+
+.gold {
+  background-color: rgba(241, 192, 101, 1);
+}
+
+.blue {
+  background-color: rgba(190, 236, 253, 1);
+}
+
+.gray {
+  background-color: rgba(241, 241, 241, 1);
+}
+</style>
