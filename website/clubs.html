@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="clubs.js"></script>
 </head>
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
@@ -49,12 +50,22 @@
                       
             </div>
             <div class="col-8">
-                <h1>SURVEY AND PREFERENCES</h1>
+                <h1>You're Club Preferences</h1>
+                <div class="form-group">
+                    <form class="form-inline">
+                        <label for="academics">academics</label>
+                        <input type="checkbox" id="academics" onchange="academia()">
+                        <label for="sports">sports</label>
+                        <input type="checkbox" id="sports">
+                        <label for="tech">Tech</label>
+                        <input type="checkbox" id="tech">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <div class="container-fluid" style="height: 100em; margin-top: 5em">
-        <h1>CONTENT</h1>
+        <h1 id="demo">CONTENT</h1>
     </div>
 
 
