@@ -2,6 +2,8 @@
 This module only needs to be run once, in order to write the html souce of the page
 to a file, page.html.
 It's kept here for reference
+
+A 'chromedriver' must be installed in order to use this script
 """
 from bs4 import BeautifulSoup
 from selenium import webdriver
