@@ -50,16 +50,14 @@ background-size: cover;">
   <!-- <div style="height: 100em; background-color:white; padding: 2em; opacity: 0.9">
         <h1 id="demo">CONTENT</h1>
   </div> -->
-
-  <div class="container-fluid" style="height: 100em; margin-top: 5em">
-    <div class="container d-inline-block">
-      <h1 style="background-color: white" id="demo">CONTENT</h1>
-        {% from "_formhelpers.html" import render_field %}
-        <form method="POST">
-          {{ render_field(form.search) }}
-          <input type=submit value=Search>
-        </form>
-    </div>
+    <div class="container-fluid" style="height: 100em; margin-top: 5em">
+      <div class="container d-inline-block">
+            {% from "_formhelpers.html" import render_field %}
+          <form method="POST">
+            {{ render_field(form.search) }}
+            <input type=submit value=Search>
+          </form>
+      </div>
       <div class="container">
         <div class="card-columns">
           {% for key, value in club_data.items() %}

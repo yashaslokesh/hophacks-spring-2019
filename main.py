@@ -50,7 +50,7 @@ def hour_tracker():
 def main():
     # Runs on localhost:8080 in 'debug' mode. app gets reloaded every time
     # changes are made to the app.
-    app.run(host='127.0.0.1', port=8080, debug=False)
+    app.run(host='127.0.0.1', port=8080, debug=True)
 
 if __name__ == '__main__':
     # Run Flask app
