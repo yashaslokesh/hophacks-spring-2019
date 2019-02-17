@@ -4,5 +4,4 @@
 Contributors:
 Egzona Rexhepi, 
 Yashas Lokesh,
-Christopher Xu,
-Devanshaw Singh
+Christopher Xu
