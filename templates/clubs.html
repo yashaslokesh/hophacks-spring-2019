@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clubs and Organizations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="content.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='content.css') }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="{{ url_for('static', filename='clubs.js') }}"></script>
+</head>
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/index">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Clubs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/hour-tracker">Time Management</a>
+      </li>
+
+    </ul>
+</nav>
+
+<!-- {{ url_for('static', filename='clubs-background.jpg') }} -->
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='content.css') }}"> -->
+<!-- <body style="background-image: url('assets/clubs-background.jpg');"> -->
+<body class="clubs" style="background-image: url('static/clubs-background.jpg');    background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <center>
+        <h1>Clubs and Organizations</h1>
+        <p>Student groups and organizations for you to join and make friends!</p>
+      </center>
+    </div>
+
+  </div>
+
+    
+  <!-- <div style="height: 100em; background-color:white; padding: 2em; opacity: 0.9">
+        <h1 id="demo">CONTENT</h1>
+  </div> -->
+
+  <div class="container-fluid" style="height: 100em; margin-top: 5em">
+    <div class="container d-inline-block">
+      <h1 style="background-color: white" id="demo">CONTENT</h1>
+        {% from "_formhelpers.html" import render_field %}
+        <form method="POST">
+          {{ render_field(form.search) }}
+          <input type=submit value=Search>
+        </form>
+    </div>
+      <div class="container">
+        <div class="card-columns">
+          {% for key, value in club_data.items() %}
+            <div class="card bg-light">
+              <a href={{ value }} class="card-body text-center">
+                <p class="card-text">{{ key }}</p>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+
+
+</body>

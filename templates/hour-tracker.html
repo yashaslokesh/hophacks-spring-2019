@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="content.css">
+  <!-- <link rel="stylesheet" href="content.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='content.css') }}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -33,10 +34,10 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="/index">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="clubs.html">Clubs</a>
+        <a class="nav-link" href="/clubs">Clubs</a>
       </li>
       <li class="nav-item active">
           <a class="nav-link" href="#">Time Management</a>
@@ -44,9 +45,10 @@
     </ul>
   </nav>
 
-<body style="background-image: url('assets/clubs-background.jpg');">
-
-
+<body style="background-image: url('static/clubs-background.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;" class="clubs">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
         <center>
