@@ -11,6 +11,9 @@ input {
     margin: 1em
 }
 
+form {
+
+}
 .container-fluid{
     opacity: .9;
 }

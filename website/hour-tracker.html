@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clubs and Organizations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="content.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        function updateHours() {
+
+        var sum = 0;
+        sum += document.getElementById("credits").value * 3; 
+        sum += document.getElementById("workOut").value;
+        sum += document.getElementById("funFriends").value;
+        sum += document.getElementById("freeTime").value;
+        sum += document.getElementById("Transportation").value;
+        sum += document.getElementById("food").value;
+        sum += document.getElementById("other").value;
+
+        document.getElementById("sum").innerHTML="sum: " + sum;
+        sum = 0;
+
+        }
+
+  </script>
+</head>
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="LandingPage.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="clubs.html">Clubs</a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="#">Hour Tracker</a>
+      </li>
+    </ul>
+  </nav>
+
+<body style="background-image: url('assets/clubs-background.jpg');">
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <center>
+          <h1>Hour Tracker</h1>
+          <p>List the number of hours you plan on spending on the below activities and find out if it's manageable or not</p>
+        </center>
+        </div>
+
+    </div>
+
+    <center>
+    <div class="form-group" style="background-color: white; opacity: .9; padding: 3em">
+
+            <label for="credits">credits(credits)</label>
+            <input id="credits" type="number" placeholder="0">
+            <br>
+            <label for="working out">working out(hrs)</label>
+            <input id="workOut" type = "number" placeholder="0">
+            <br>
+
+            <label for="fun with friends">fun with friends(hrs)</label>
+            <input id="funFriends" type="number" placeholder="0">
+            <br>
+
+            <label for="Free time">Free time(hrs)</label>
+            <input id="freeTime" type="number" placeholder="0">
+            <br>
+
+            <label for="transportation">Transportation(hrs)</label>
+            <input id="Transportation" type="number" placeholder="0">
+            <br>
+
+            <label for="Food">Food(hrs)</label>
+            <input id="food" type="number" placeholder="0">
+            <br>
+
+            <label for="other">Other(hrs)</label>
+            <input id="other" type="number" placeholder="0">
+            <br>
+
+            <button onclick="updateHours()">calculate</button>
+            <br>
+            <p id="sum" style="text-align: center">sum: 0</p>
+            <p>Total hours in a week: 168 hours</p>
+    </div>
+    </center>
+</div>
