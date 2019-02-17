@@ -14,13 +14,13 @@
         function updateHours() {
 
         var sum = 0;
-        sum += document.getElementById("credits").value * 3; 
-        sum += document.getElementById("workOut").value;
-        sum += document.getElementById("funFriends").value;
-        sum += document.getElementById("freeTime").value;
-        sum += document.getElementById("Transportation").value;
-        sum += document.getElementById("food").value;
-        sum += document.getElementById("other").value;
+        sum += parseInt(document.getElementById("credits").value * 3); 
+        sum += parseInt(document.getElementById("workOut").value);
+        sum += parseInt(document.getElementById("funFriends").value);
+        sum += parseInt(document.getElementById("freeTime").value);
+        sum += parseInt(document.getElementById("Transportation").value);
+        sum += parseInt(document.getElementById("food").value);
+        sum += parseInt(document.getElementById("other").value);
 
         document.getElementById("sum").innerHTML="sum: " + sum;
         sum = 0;
